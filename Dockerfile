@@ -14,9 +14,6 @@ RUN ln -s /ansible-dwarffortress-* /ansible
 # Comment the line below if you do not want dfhack
 RUN cd /ansible && ansible-playbook dfhack.yml --connection=local
 
-# Uncomment the line below if you want to use the Phoebus tile set
-RUN cd /ansible && ansible-playbook tileset-phoebus.yml --connection=local
-
 # Only pick ONE of the following display options:
 
 # 2D mode using noVNC (control via a browser)
@@ -30,6 +27,9 @@ RUN cd /ansible && ansible-playbook xpra.yml --connection=local
 
 # GITWATCH
 RUN cd /ansible && ansible-playbook gitwatch.yml --connection=local
+
+# Uncomment the line below if you want to use the Phoebus tile set
+RUN cd /ansible && ansible-playbook tileset-phoebus.yml --connection=local
 
 # Add scripts
 ADD https://github.com/bencawkwell/supervisor-tools/raw/master/wait-for-daemons.sh /wait-for-daemons.sh
