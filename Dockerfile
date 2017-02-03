@@ -7,7 +7,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y $DFPKGS
 
 # Add the ansible playbooks from github
-ADD https://github.com/bencawkwell/ansible-dwarffortress/archive/v0.43.03-r1.zip /ansible.zip
+ADD https://github.com/bencawkwell/ansible-dwarffortress/archive/v0.43.05.zip /ansible.zip
 RUN unzip /ansible.zip
 RUN ln -s /ansible-dwarffortress-* /ansible
 
