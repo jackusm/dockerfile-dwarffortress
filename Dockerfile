@@ -28,6 +28,9 @@ RUN cd /ansible && ansible-playbook xpra.yml --connection=local
 # TEXT mode (in the console)
 #RUN cd /ansible && ansible-playbook textmode.yml --connection=local
 
+# GITWATCH
+RUN cd /ansible && ansible-playbook gitwatch.yml --connection=local
+
 # Add scripts
 ADD https://github.com/bencawkwell/supervisor-tools/raw/master/wait-for-daemons.sh /wait-for-daemons.sh
 ADD start.sh /start.sh
